@@ -11,9 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideBackButton()
         // Do any additional setup after loading the view.
     }
-
+    func hideBackButton(){
+        navigationItem.hidesBackButton = true
+    }
 
 }
 

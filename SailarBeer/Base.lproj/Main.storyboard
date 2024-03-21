@@ -1,24 +1,373 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7rS-tm-MIa">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SailarBeer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="94n-KN-aKq">
+                                <rect key="frame" x="-1" y="103" width="393" height="342"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-pO-jAr">
+                                <rect key="frame" x="133" y="586" width="128" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="輕點開始遊戲"/>
+                                <connections>
+                                    <segue destination="adE-oh-lE7" kind="show" id="Brp-CX-aVg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gKA-t3-kef"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GeJ-hc-tOi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7rS-tm-MIa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ehy-6X-qur">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LRk-8H-QCc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pDN-zq-ftY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KUP-Np-nQc">
+            <objects>
+                <viewController id="adE-oh-lE7" customClass="ViewController" customModule="SailarBeer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5gg-il-v2H">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note2" translatesAutoresizingMaskIntoConstraints="NO" id="Gig-QC-dtc">
+                                <rect key="frame" x="-1" y="103" width="393" height="342"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="來場猜數字遊戲吧，輸的人得喝一杯啤酒！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9gG-3w-CRh">
+                                <rect key="frame" x="-1" y="438" width="393" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUP-hN-6bv">
+                                <rect key="frame" x="23.966666666662832" y="624.99999999998101" width="343.0000000000598" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ico-FI-IJS" kind="show" id="MkA-Ur-Xcd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fgd-t0-N1j"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fgd-t0-N1j" firstAttribute="bottom" secondItem="Gig-QC-dtc" secondAttribute="bottom" constant="373" id="2Og-zg-KyT"/>
+                            <constraint firstItem="fgd-t0-N1j" firstAttribute="trailing" secondItem="Gig-QC-dtc" secondAttribute="trailing" constant="1" id="BC5-AU-mlf"/>
+                            <constraint firstItem="Gig-QC-dtc" firstAttribute="leading" secondItem="5gg-il-v2H" secondAttribute="leadingMargin" constant="-17" id="thM-ya-21H"/>
+                            <constraint firstItem="Gig-QC-dtc" firstAttribute="top" secondItem="fgd-t0-N1j" secondAttribute="top" id="x8u-wx-ucX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wsT-ES-RgQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfd-EJ-OYh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="-27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jgc-bz-w7H">
+            <objects>
+                <viewController id="ico-FI-IJS" customClass="ViewController" customModule="SailarBeer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CB6-8D-TbM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note03" translatesAutoresizingMaskIntoConstraints="NO" id="Bie-Xf-vtI">
+                                <rect key="frame" x="-1" y="103" width="393" height="342"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="運用策略，選擇一個到三個骰子，來累積點數。" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E0C-KK-J4G">
+                                <rect key="frame" x="-1" y="438" width="393" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYh-3D-WpN">
+                                <rect key="frame" x="23.966666666662832" y="624.99999999998101" width="343.0000000000598" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="SEP-yL-opE" kind="show" id="62o-Uy-r5f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SFY-Fi-0OA"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Bie-Xf-vtI" firstAttribute="top" secondItem="SFY-Fi-0OA" secondAttribute="top" id="AFD-2a-pbg"/>
+                            <constraint firstItem="SFY-Fi-0OA" firstAttribute="trailing" secondItem="Bie-Xf-vtI" secondAttribute="trailing" constant="1" id="Oro-26-bUp"/>
+                            <constraint firstItem="Bie-Xf-vtI" firstAttribute="leading" secondItem="CB6-8D-TbM" secondAttribute="leadingMargin" constant="-17" id="xoL-2Y-zaq"/>
+                            <constraint firstItem="SFY-Fi-0OA" firstAttribute="bottom" secondItem="Bie-Xf-vtI" secondAttribute="bottom" constant="373" id="yFn-c1-7Je"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lmi-HM-yNi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovz-qi-sjw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2721" y="-27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lz7-Gu-1k9">
+            <objects>
+                <viewController id="SEP-yL-opE" customClass="ViewController" customModule="SailarBeer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csK-QC-Vir">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note3" translatesAutoresizingMaskIntoConstraints="NO" id="2F3-l6-vt4">
+                                <rect key="frame" x="-1" y="103" width="393" height="342"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="透過搖晃手機來取得點數，刷新後，將手機給下一個玩家，祝大家好運！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-Jz-qW4">
+                                <rect key="frame" x="-1" y="438" width="393" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUS-nF-INe">
+                                <rect key="frame" x="23.966666666662832" y="624.99999999998101" width="343.0000000000598" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Star to play">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="YzY-rN-TFc" kind="show" id="d1q-zR-wgl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="byl-Lq-4aR"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2F3-l6-vt4" firstAttribute="top" secondItem="byl-Lq-4aR" secondAttribute="top" id="Cm1-WG-ORZ"/>
+                            <constraint firstItem="2F3-l6-vt4" firstAttribute="leading" secondItem="csK-QC-Vir" secondAttribute="leadingMargin" constant="-17" id="Rh6-el-YRB"/>
+                            <constraint firstItem="byl-Lq-4aR" firstAttribute="bottom" secondItem="2F3-l6-vt4" secondAttribute="bottom" constant="373" id="dos-jo-4yx"/>
+                            <constraint firstItem="byl-Lq-4aR" firstAttribute="trailing" secondItem="2F3-l6-vt4" secondAttribute="trailing" constant="1" id="y0J-wZ-NXc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aln-5f-zht"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnT-D4-BrA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3479" y="-27"/>
+        </scene>
+        <!--Setplayer View Controller-->
+        <scene sceneID="C31-hy-JgD">
+            <objects>
+                <viewController id="YzY-rN-TFc" customClass="setplayerViewController" customModule="SailarBeer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78l-dm-xnL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sI-mJ-hVr">
+                                <rect key="frame" x="23.966666666662832" y="624.99999999998101" width="343.0000000000598" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="開始遊戲">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="iCE-Pc-eh0" kind="show" destinationCreationSelector="showNumber:" id="YVW-4d-2nu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請選擇遊戲人數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6U-Xg-YMA">
+                                <rect key="frame" x="65.333333333278915" y="132.00000000001876" width="260.99999999990905" height="45.000000000007844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFb-AU-3W6">
+                                <rect key="frame" x="31" y="208" width="331" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="btn01"/>
+                                <connections>
+                                    <action selector="randomA:" destination="YzY-rN-TFc" eventType="touchUpInside" id="AMy-Iy-pOg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcI-jn-3WC">
+                                <rect key="frame" x="30" y="389" width="331" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="btn02"/>
+                                <connections>
+                                    <action selector="randomB:" destination="YzY-rN-TFc" eventType="touchUpInside" id="bfZ-LO-Vox"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wuQ-vM-sEe"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1kJ-tx-yoL"/>
+                    <connections>
+                        <outlet property="playGame" destination="0sI-mJ-hVr" id="Tgj-ej-RML"/>
+                        <outlet property="randomA" destination="qFb-AU-3W6" id="ONk-bW-fEp"/>
+                        <outlet property="randomB" destination="mcI-jn-3WC" id="ErU-kp-Tej"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0x9-0A-dZ8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4262" y="-27"/>
+        </scene>
+        <!--Game Inf View Controller-->
+        <scene sceneID="ZKe-EN-BCt">
+            <objects>
+                <viewController id="iCE-Pc-eh0" customClass="gameInfViewController" customModule="SailarBeer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hyz-ZJ-UJS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6z-Ur-h6x">
+                                <rect key="frame" x="0.0" y="92" width="393" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-sH-Ecw">
+                                <rect key="frame" x="24" y="530" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="1dice" strokeWidth="3">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playOne:" destination="iCE-Pc-eh0" eventType="touchUpInside" id="ggU-An-hwS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3f-b7-EVm">
+                                <rect key="frame" x="139" y="530" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="1dice" strokeWidth="0.0">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playTwo:" destination="iCE-Pc-eh0" eventType="touchUpInside" id="nny-u6-J5q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-MJ-bnw">
+                                <rect key="frame" x="255" y="530" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="1dice" strokeWidth="0.0">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playThree:" destination="iCE-Pc-eh0" eventType="touchUpInside" id="8vL-q5-nXH"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="losse" translatesAutoresizingMaskIntoConstraints="NO" id="Ax4-iD-WsM">
+                                <rect key="frame" x="0.0" y="234" width="393" height="238"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6la-mt-Com">
+                                <rect key="frame" x="0.0" y="461" width="393" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi3-CP-ASa">
+                                <rect key="frame" x="24.199999999999363" y="668.00000000009595" width="343.0000000000598" height="60.000000000010459"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="再玩一次">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playAgain:" destination="iCE-Pc-eh0" eventType="touchUpInside" id="KLW-O7-Wce"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S8f-7C-44t"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qo2-ch-4YI"/>
+                    <connections>
+                        <outlet property="MSG" destination="6la-mt-Com" id="jJj-Bh-Cle"/>
+                        <outlet property="beerPic" destination="Ax4-iD-WsM" id="sao-xa-8I3"/>
+                        <outlet property="codeInf" destination="V6z-Ur-h6x" id="r5o-fH-Xaf"/>
+                        <outlet property="gameMSG" destination="Ax4-iD-WsM" id="uAk-Ys-yLs"/>
+                        <outlet property="oneDice" destination="Fcb-sH-Ecw" id="kvJ-pT-cYr"/>
+                        <outlet property="playAgain" destination="Oi3-CP-ASa" id="Jc3-j9-Api"/>
+                        <outlet property="threeDice" destination="xlJ-MJ-bnw" id="8uG-AQ-T2p"/>
+                        <outlet property="twoDice" destination="m3f-b7-EVm" id="Tld-Gw-BhX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="le6-3C-4x4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5087.7862595419847" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1dice" width="4096" height="4096"/>
+        <image name="btn01" width="331" height="160"/>
+        <image name="btn02" width="331" height="160"/>
+        <image name="logo" width="337" height="472"/>
+        <image name="losse" width="393" height="346"/>
+        <image name="note03" width="312" height="312"/>
+        <image name="note2" width="312" height="312"/>
+        <image name="note3" width="1024" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
