@@ -30,8 +30,8 @@ class gameInfViewController: UIViewController {
         hideBackButton()
         beerPic.layer.opacity = 0
         oneDice.layer.borderWidth = 3
-        twoDice.layer.borderWidth = 1
-        threeDice.layer.borderWidth = 1
+        twoDice.layer.borderWidth = 0
+        threeDice.layer.borderWidth = 0
         oneDice.layer.cornerRadius = 20
         twoDice.layer.cornerRadius = 20
         threeDice.layer.cornerRadius = 20
@@ -55,23 +55,23 @@ class gameInfViewController: UIViewController {
         AudioServicesPlaySystemSound(1519) // Actuate "Pop" feedback (strong boom)
         diceCount = 1
         oneDice.layer.borderWidth = 3
-        twoDice.layer.borderWidth = 1
-        threeDice.layer.borderWidth = 1
+        twoDice.layer.borderWidth = 0
+        threeDice.layer.borderWidth = 0
         oneDice.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
     }
     @IBAction func playTwo(_ sender: Any) {
         AudioServicesPlaySystemSound(1519) // Actuate "Pop" feedback (strong boom)
         diceCount = 2
-        oneDice.layer.borderWidth = 1
+        oneDice.layer.borderWidth = 0
         twoDice.layer.borderWidth = 3
-        threeDice.layer.borderWidth = 1
+        threeDice.layer.borderWidth = 0
         twoDice.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
     }
     @IBAction func playThree(_ sender: Any) {
         AudioServicesPlaySystemSound(1519) // Actuate "Pop" feedback (strong boom)
         diceCount = 3
-        oneDice.layer.borderWidth = 1
-        twoDice.layer.borderWidth = 1
+        oneDice.layer.borderWidth = 0
+        twoDice.layer.borderWidth = 0
         threeDice.layer.borderWidth = 3
         threeDice.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
     }
@@ -82,7 +82,7 @@ class gameInfViewController: UIViewController {
            codeInf.text = ""
             if gameover == false {
                 AudioServicesPlaySystemSound(1521) // Actuate "Pop" feedback (strong boom)
-                for i in 1...diceCount {
+                for _ in 1...diceCount {
                     tempDice = Int.random(in: 1...6)
                     sumOfDice = sumOfDice + tempDice
                     codeInf.text = String(sumOfDice)
@@ -94,7 +94,7 @@ class gameInfViewController: UIViewController {
                      beerPic.layer.opacity = 1
                      playAgain.layer.opacity = 1
                      MSG.layer.opacity = 1
-                     MSG.text = "Death Code is \(String(diceCode))"
+                     MSG.text = "終極密碼是： \(String(diceCode))"
                      gameover = true
                  }
                 
