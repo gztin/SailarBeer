@@ -69,7 +69,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note2" translatesAutoresizingMaskIntoConstraints="NO" id="Gig-QC-dtc">
                                 <rect key="frame" x="-1" y="103" width="393" height="342"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="來場猜數字遊戲吧，輸的人得喝一杯啤酒！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9gG-3w-CRh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="來場積點遊戲吧，超過或者點數與號碼相同的就是輸家，得喝一杯啤酒！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9gG-3w-CRh">
                                 <rect key="frame" x="-1" y="438" width="393" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -163,7 +163,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note3" translatesAutoresizingMaskIntoConstraints="NO" id="2F3-l6-vt4">
                                 <rect key="frame" x="-1" y="103" width="393" height="342"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="透過搖晃手機來取得點數，刷新後，將手機給下一個玩家，祝大家好運！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-Jz-qW4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="透過搖晃手機來累積點數，接著換下一個玩家，祝大家好運！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-Jz-qW4">
                                 <rect key="frame" x="-1" y="438" width="393" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -175,7 +175,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Star to play">
+                                <buttonConfiguration key="configuration" style="filled" title="開始遊戲">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -215,7 +215,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFb-AU-3W6">
-                                <rect key="frame" x="31" y="208" width="331" height="160"/>
+                                <rect key="frame" x="23.93333333333203" y="207.99999999998749" width="343" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="btn01"/>
@@ -224,7 +224,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcI-jn-3WC">
-                                <rect key="frame" x="30" y="389" width="331" height="160"/>
+                                <rect key="frame" x="23.93333333333203" y="388.99999999998829" width="343" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="btn02"/>
@@ -232,8 +232,8 @@
                                     <action selector="randomB:" destination="YzY-rN-TFc" eventType="touchUpInside" id="bfZ-LO-Vox"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sI-mJ-hVr">
-                                <rect key="frame" x="25" y="575" width="343" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sI-mJ-hVr">
+                                <rect key="frame" x="23.93333333333203" y="574.99999999998261" width="343" height="84.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -294,7 +294,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" cornerRadius="20" image="1dice" strokeWidth="0.0">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="2dice" strokeWidth="0.0">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
@@ -308,7 +308,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" cornerRadius="20" image="1dice" strokeWidth="0.0">
+                                    <backgroundConfiguration key="background" cornerRadius="20" image="3dice" strokeWidth="0.0">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
@@ -321,7 +321,7 @@
                                 <rect key="frame" x="0.0" y="234" width="393" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6la-mt-Com">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6la-mt-Com">
                                 <rect key="frame" x="0.0" y="461" width="393" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -364,8 +364,10 @@
     </scenes>
     <resources>
         <image name="1dice" width="4096" height="4096"/>
-        <image name="btn01" width="331" height="160"/>
-        <image name="btn02" width="331" height="160"/>
+        <image name="2dice" width="4096" height="4096"/>
+        <image name="3dice" width="360" height="360"/>
+        <image name="btn01" width="343" height="160"/>
+        <image name="btn02" width="343" height="160"/>
         <image name="logo" width="337" height="472"/>
         <image name="losse" width="393" height="346"/>
         <image name="note03" width="312" height="312"/>

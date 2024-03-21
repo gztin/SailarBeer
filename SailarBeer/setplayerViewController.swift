@@ -17,7 +17,7 @@ class setplayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideBackButton()
         // Do any additional setup after loading the view.
     }
     
@@ -50,7 +50,9 @@ class setplayerViewController: UIViewController {
         controller?.diceCode = diceNumber
         return controller
     }
-    
+    func hideBackButton(){
+        navigationItem.hidesBackButton = true
+    }
     /*
     // MARK: - Navigation
 

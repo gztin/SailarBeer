@@ -35,13 +35,13 @@ class gameInfViewController: UIViewController {
         oneDice.layer.cornerRadius = 20
         twoDice.layer.cornerRadius = 20
         threeDice.layer.cornerRadius = 20
+        MSG.text = "本局目標點數是： \(String(diceCode))"
         // Do any additional setup after loading the view.
     }
     
     @IBAction func playAgain(_ sender: Any) {
         playAgain.layer.opacity = 0
         codeInf.text = "0"
-        MSG.layer.opacity = 0
         sumOfDice = 0
         beerPic.layer.opacity = 0
         diceCode = Int.random(in: 50...100)
@@ -94,7 +94,6 @@ class gameInfViewController: UIViewController {
                      beerPic.layer.opacity = 1
                      playAgain.layer.opacity = 1
                      MSG.layer.opacity = 1
-                     MSG.text = "終極密碼是： \(String(diceCode))"
                      gameover = true
                  }
                 
