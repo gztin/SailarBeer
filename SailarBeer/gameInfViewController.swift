@@ -9,7 +9,11 @@ import UIKit
 import AVFoundation
 
 class gameInfViewController: UIViewController {
-
+    
+    var click: AVAudioPlayer?
+    var diceRoll: AVAudioPlayer?
+    var losegame: AVAudioPlayer?
+    
     var diceCode:Int!
     var diceCount:Int = 1
     var tempDice:Int = 0
@@ -27,6 +31,31 @@ class gameInfViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //        按鈕音效
+        let urlClick = Bundle.main.url(forResource: "click", withExtension: "wav")!
+        do {
+            click = try AVAudioPlayer(contentsOf: urlClick)
+        } catch {
+            print("按鈕音效檔案出現錯誤：\(error)")
+        }
+        
+        //        骰子音效
+        let urlDice = Bundle.main.url(forResource: "dice", withExtension: "wav")!
+        do {
+            diceRoll = try AVAudioPlayer(contentsOf: urlDice)
+        } catch {
+            print("擲骰子音效檔案出現錯誤：\(error)")
+        }
+        
+        //        遊戲結束音效
+        let urllose = Bundle.main.url(forResource: "gamelose", withExtension: "mp3")!
+        do {
+            losegame = try AVAudioPlayer(contentsOf: urllose)
+        } catch {
+            print("擲骰子音效檔案出現錯誤：\(error)")
+        }
+        
         hideBackButton()
         beerPic.layer.opacity = 0
         oneDice.layer.borderWidth = 3
@@ -40,11 +69,17 @@ class gameInfViewController: UIViewController {
     }
     
     @IBAction func playAgain(_ sender: Any) {
+        click?.play()
+        click?.stop()
+        click?.currentTime = 0
+        click?.play()
+        
         playAgain.layer.opacity = 0
         codeInf.text = "0"
         sumOfDice = 0
         beerPic.layer.opacity = 0
         diceCode = Int.random(in: 50...100)
+        MSG.text = "本局目標點數是： \(String(diceCode))"
         gameover = false
     }
     func hideBackButton(){
@@ -52,6 +87,11 @@ class gameInfViewController: UIViewController {
     }
     
     @IBAction func playOne(_ sender: Any) {
+        click?.play()
+        click?.stop()
+        click?.currentTime = 0
+        click?.play()
+        
         AudioServicesPlaySystemSound(1519) // Actuate "Pop" feedback (strong boom)
         diceCount = 1
         oneDice.layer.borderWidth = 3
@@ -60,6 +100,11 @@ class gameInfViewController: UIViewController {
         oneDice.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
     }
     @IBAction func playTwo(_ sender: Any) {
+        click?.play()
+        click?.stop()
+        click?.currentTime = 0
+        click?.play()
+        
         AudioServicesPlaySystemSound(1519) // Actuate "Pop" feedback (strong boom)
         diceCount = 2
         oneDice.layer.borderWidth = 0
@@ -68,6 +113,11 @@ class gameInfViewController: UIViewController {
         twoDice.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
     }
     @IBAction func playThree(_ sender: Any) {
+        click?.play()
+        click?.stop()
+        click?.currentTime = 0
+        click?.play()
+        
         AudioServicesPlaySystemSound(1519) // Actuate "Pop" feedback (strong boom)
         diceCount = 3
         oneDice.layer.borderWidth = 0
@@ -77,7 +127,11 @@ class gameInfViewController: UIViewController {
     }
     //    搖晃
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-      
+        diceRoll?.play()
+        diceRoll?.stop()
+        diceRoll?.currentTime = 0
+        diceRoll?.play()
+        
         if motion == .motionShake {
            codeInf.text = ""
             if gameover == false {
@@ -90,7 +144,11 @@ class gameInfViewController: UIViewController {
                 }
                  
                  if sumOfDice >= diceCode {
-                     AudioServicesPlaySystemSound(1521) // Actuate "Pop" feedback (strong boom)
+                     losegame?.play()
+                     losegame?.stop()
+                     losegame?.currentTime = 0
+                     losegame?.play()
+                     
                      beerPic.layer.opacity = 1
                      playAgain.layer.opacity = 1
                      MSG.layer.opacity = 1

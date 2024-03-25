@@ -27,6 +27,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="輕點開始遊戲"/>
                                 <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zKD-Sw-xdh"/>
                                     <segue destination="adE-oh-lE7" kind="show" id="Brp-CX-aVg"/>
                                 </connections>
                             </button>
@@ -86,6 +87,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="step1:" destination="adE-oh-lE7" eventType="touchUpInside" id="5ZA-au-pxI"/>
                                     <segue destination="ico-FI-IJS" kind="show" id="MkA-Ur-Xcd"/>
                                 </connections>
                             </button>
@@ -133,6 +135,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="step2:" destination="ico-FI-IJS" eventType="touchUpInside" id="bzP-3J-tYE"/>
                                     <segue destination="SEP-yL-opE" kind="show" id="62o-Uy-r5f"/>
                                 </connections>
                             </button>
@@ -180,6 +183,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="step3:" destination="SEP-yL-opE" eventType="touchUpInside" id="TG7-w8-HJ9"/>
                                     <segue destination="YzY-rN-TFc" kind="show" id="d1q-zR-wgl"/>
                                 </connections>
                             </button>
@@ -232,7 +236,7 @@
                                     <action selector="randomB:" destination="YzY-rN-TFc" eventType="touchUpInside" id="bfZ-LO-Vox"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sI-mJ-hVr">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sI-mJ-hVr">
                                 <rect key="frame" x="23.93333333333203" y="574.99999999998261" width="343" height="84.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,6 +246,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="starPlay:" destination="YzY-rN-TFc" eventType="touchUpInside" id="SQS-SQ-bCh"/>
                                     <segue destination="iCE-Pc-eh0" kind="show" destinationCreationSelector="showNumber:" id="YVW-4d-2nu"/>
                                 </connections>
                             </button>
@@ -276,7 +281,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-sH-Ecw">
-                                <rect key="frame" x="24" y="530" width="110" height="110"/>
+                                <rect key="frame" x="24" y="557" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -290,7 +295,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3f-b7-EVm">
-                                <rect key="frame" x="139" y="530" width="110" height="110"/>
+                                <rect key="frame" x="139" y="557" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -304,7 +309,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-MJ-bnw">
-                                <rect key="frame" x="255" y="530" width="110" height="110"/>
+                                <rect key="frame" x="255" y="557" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -329,7 +334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi3-CP-ASa">
-                                <rect key="frame" x="24.199999999999363" y="668.00000000009595" width="343.0000000000598" height="60.000000000010459"/>
+                                <rect key="frame" x="24.199999999999363" y="695.00000000009595" width="343.00000000005957" height="60.000000000010459"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -341,6 +346,13 @@
                                     <action selector="playAgain:" destination="iCE-Pc-eh0" eventType="touchUpInside" id="KLW-O7-Wce"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="提示：選擇骰子數量後，搖動手機" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1L5-DC-cqA">
+                                <rect key="frame" x="74" y="526" width="245" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S8f-7C-44t"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
