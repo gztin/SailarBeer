@@ -29,6 +29,15 @@ class gameInfViewController: UIViewController {
     @IBOutlet var gameMSG: UIImageView!
     @IBOutlet var playAgain: UIButton!
     
+    
+    @IBOutlet var oneDiceA: UIImageView!
+    @IBOutlet var twoDiceA: UIImageView!
+    @IBOutlet var twoDiceB: UIImageView!
+    
+    @IBOutlet var threeDiceA: UIImageView!
+    @IBOutlet var threeDiceB: UIImageView!
+    @IBOutlet var threeDiceC: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -132,18 +141,56 @@ class gameInfViewController: UIViewController {
         diceRoll?.currentTime = 0
         diceRoll?.play()
         
+        oneDiceA.layer.opacity = 0
+        twoDiceA.layer.opacity = 0
+        twoDiceB.layer.opacity = 0
+        threeDiceA.layer.opacity = 0
+        threeDiceB.layer.opacity = 0
+        threeDiceC.layer.opacity = 0
+        
         if motion == .motionShake {
            codeInf.text = ""
             if gameover == false {
                 AudioServicesPlaySystemSound(1521) // Actuate "Pop" feedback (strong boom)
-                for _ in 1...diceCount {
-                    tempDice = Int.random(in: 1...6)
+                for i in 1...diceCount {
+                    if diceCount == 1 && (i == 1){
+                        tempDice = Int.random(in: 1...6)
+                        oneDiceA.image = UIImage(named: "\(tempDice)-dice.jpg")
+                        oneDiceA.layer.opacity = 1
+                    }else if diceCount == 2 && (i == 1){
+                        tempDice = Int.random(in: 1...6)
+                        twoDiceA.image = UIImage(named: "\(tempDice)-dice.jpg")
+                        twoDiceA.layer.opacity = 1
+                    }else if diceCount == 2 && (i == 2){
+                        tempDice = Int.random(in: 1...6)
+                        twoDiceB.image = UIImage(named: "\(tempDice)-dice.jpg")
+                        twoDiceB.layer.opacity = 1
+                    }else if diceCount == 3 && (i == 1){
+                        tempDice = Int.random(in: 1...6)
+                        threeDiceA.image = UIImage(named: "\(tempDice)-dice.jpg")
+                        threeDiceA.layer.opacity = 1
+                    }else if diceCount == 3 && (i == 2){
+                        tempDice = Int.random(in: 1...6)
+                        threeDiceB.image = UIImage(named: "\(tempDice)-dice.jpg")
+                        threeDiceB.layer.opacity = 1
+                    }else if diceCount == 3 && (i == 3){
+                        tempDice = Int.random(in: 1...6)
+                        threeDiceC.image = UIImage(named: "\(tempDice)-dice.jpg")
+                        threeDiceC.layer.opacity = 1
+                    }
                     sumOfDice = sumOfDice + tempDice
                     codeInf.text = String(sumOfDice)
                     print("總點數是\(sumOfDice)")
                 }
                  
                  if sumOfDice >= diceCode {
+                     oneDiceA.layer.opacity = 0
+                     twoDiceA.layer.opacity = 0
+                     twoDiceB.layer.opacity = 0
+                     threeDiceA.layer.opacity = 0
+                     threeDiceB.layer.opacity = 0
+                     threeDiceC.layer.opacity = 0
+                     
                      losegame?.play()
                      losegame?.stop()
                      losegame?.currentTime = 0
@@ -154,7 +201,6 @@ class gameInfViewController: UIViewController {
                      MSG.layer.opacity = 1
                      gameover = true
                  }
-                
             }
             else{
                 codeInf.text = String(sumOfDice)
