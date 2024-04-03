@@ -38,7 +38,7 @@ class setplayerViewController: UIViewController {
         click?.currentTime = 0
         click?.play()
         
-        randomA.layer.borderWidth = 3
+        randomA.layer.borderWidth = 5
         randomB.layer.borderWidth = 0
         randomA.layer.cornerRadius = 20
         randomB.layer.cornerRadius = 0
@@ -55,7 +55,7 @@ class setplayerViewController: UIViewController {
         click?.currentTime = 0
         click?.play()
         
-        randomB.layer.borderWidth = 3
+        randomB.layer.borderWidth = 5
         randomA.layer.borderWidth = 0
         randomA.layer.cornerRadius = 0
         randomB.layer.cornerRadius = 20

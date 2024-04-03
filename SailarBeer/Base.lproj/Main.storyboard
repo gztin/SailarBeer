@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7rS-tm-MIa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -71,7 +72,7 @@
                                 <rect key="frame" x="-0.31182795700101451" y="0.35483870974621823" width="392.99999999992406" height="851.9999999998355"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="玩家們必須避免觸發鯊魚閘門的密碼，一旦觸發，就會輸了遊戲。" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9gG-3w-CRh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="玩家必須避免觸發鯊魚閘門的密碼，一旦觸發，就會輸了遊戲。" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9gG-3w-CRh">
                                 <rect key="frame" x="-1" y="438" width="393" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -92,18 +93,13 @@
                                     <segue destination="ico-FI-IJS" kind="show" id="MkA-Ur-Xcd"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Gig-QC-dtc">
-                                <rect key="frame" x="0.0" y="103" width="393" height="264"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="5jV-yz-AnU">
+                                <rect key="frame" x="76" y="134" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fgd-t0-N1j"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="fgd-t0-N1j" firstAttribute="bottom" secondItem="Gig-QC-dtc" secondAttribute="bottom" constant="373" id="2Og-zg-KyT"/>
-                            <constraint firstItem="fgd-t0-N1j" firstAttribute="trailing" secondItem="Gig-QC-dtc" secondAttribute="trailing" constant="1" id="BC5-AU-mlf"/>
-                            <constraint firstItem="Gig-QC-dtc" firstAttribute="leading" secondItem="5gg-il-v2H" secondAttribute="leadingMargin" constant="-17" id="thM-ya-21H"/>
-                            <constraint firstItem="Gig-QC-dtc" firstAttribute="top" secondItem="fgd-t0-N1j" secondAttribute="top" id="x8u-wx-ucX"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wsT-ES-RgQ"/>
                 </viewController>
@@ -123,10 +119,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="392.99999999992406" height="851.99999999983538"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note03" translatesAutoresizingMaskIntoConstraints="NO" id="Bie-Xf-vtI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note3" translatesAutoresizingMaskIntoConstraints="NO" id="Bie-Xf-vtI">
                                 <rect key="frame" x="-1" y="103" width="393" height="342"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="運用策略，選擇一個到三個骰子，來閃避可能會觸發的危機。" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E0C-KK-J4G">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="玩家需輪流搖晃手機，在避免點數爆掉的狀況下取得勝利！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E0C-KK-J4G">
                                 <rect key="frame" x="17.935483870961434" y="437.99999999995066" width="356.99999999993088" height="168.99999999998363"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -175,10 +171,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="392.99999999992406" height="851.99999999983538"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note3" translatesAutoresizingMaskIntoConstraints="NO" id="2F3-l6-vt4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note03" translatesAutoresizingMaskIntoConstraints="NO" id="2F3-l6-vt4">
                                 <rect key="frame" x="-1" y="103" width="393" height="342"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="玩家需輪流搖晃手機，在避免點數爆掉的狀況下取得勝利。" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-Jz-qW4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="妥善運用策略，骰出點數有時有機會抽中卡片，協助你閃避危機！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oVd-Jz-qW4">
                                 <rect key="frame" x="20.892473118294674" y="437.99999999999" width="351" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -342,8 +338,8 @@
                                     <action selector="playThree:" destination="iCE-Pc-eh0" eventType="touchUpInside" id="8vL-q5-nXH"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="losse" translatesAutoresizingMaskIntoConstraints="NO" id="Ax4-iD-WsM">
-                                <rect key="frame" x="-16" y="306" width="393" height="238"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lose" translatesAutoresizingMaskIntoConstraints="NO" id="Ax4-iD-WsM">
+                                <rect key="frame" x="-1" y="270" width="393" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6la-mt-Com">
@@ -354,7 +350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi3-CP-ASa">
-                                <rect key="frame" x="25" y="673" width="343.00000000005957" height="60.000000000010459"/>
+                                <rect key="frame" x="25" y="559" width="343.00000000005957" height="60.000000000010459"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -397,6 +393,10 @@
                                 <rect key="frame" x="212" y="473" width="145" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-yd-eaH">
+                                <rect key="frame" x="12" y="327" width="365" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S8f-7C-44t"/>
                         <color key="backgroundColor" red="0.96470588450000005" green="0.92941176889999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -405,6 +405,7 @@
                     <connections>
                         <outlet property="MSG" destination="6la-mt-Com" id="jJj-Bh-Cle"/>
                         <outlet property="beerPic" destination="Ax4-iD-WsM" id="sao-xa-8I3"/>
+                        <outlet property="cardView" destination="4dh-yd-eaH" id="IBp-1N-Q5r"/>
                         <outlet property="codeInf" destination="V6z-Ur-h6x" id="r5o-fH-Xaf"/>
                         <outlet property="gameMSG" destination="Ax4-iD-WsM" id="uAk-Ys-yLs"/>
                         <outlet property="oneDice" destination="Fcb-sH-Ecw" id="C97-pN-4FB"/>
@@ -428,13 +429,13 @@
         <image name="1dice" width="4096" height="4096"/>
         <image name="2dice" width="4096" height="4096"/>
         <image name="3dice" width="360" height="360"/>
-        <image name="btn01" width="343" height="160"/>
-        <image name="btn02" width="343" height="160"/>
+        <image name="btn01" width="331" height="160"/>
+        <image name="btn02" width="331" height="160"/>
         <image name="gamebg" width="375" height="767"/>
         <image name="index" width="393" height="852"/>
         <image name="lock" width="312" height="312"/>
-        <image name="losse" width="393" height="346"/>
-        <image name="note03" width="312" height="312"/>
+        <image name="lose" width="385" height="346"/>
+        <image name="note03" width="1024" height="1024"/>
         <image name="note3" width="1024" height="1024"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
