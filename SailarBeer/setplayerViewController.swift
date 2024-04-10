@@ -27,6 +27,10 @@ class setplayerViewController: UIViewController {
         } catch {
             print("按鈕音效檔案出現錯誤：\(error)")
         }
+        randomA.layer.cornerRadius = 20
+        randomB.layer.cornerRadius = 20
+        
+        playGame.layer.opacity = 0
         
         hideBackButton()
         // Do any additional setup after loading the view.
@@ -41,7 +45,7 @@ class setplayerViewController: UIViewController {
         randomA.layer.borderWidth = 5
         randomB.layer.borderWidth = 0
         randomA.layer.cornerRadius = 20
-        randomB.layer.cornerRadius = 0
+        randomB.layer.cornerRadius = 20
         randomA.layer.borderColor = UIColor.black.cgColor
         diceNumber = Int.random(in: 30...50)
         playGame.layer.opacity = 1
@@ -57,7 +61,7 @@ class setplayerViewController: UIViewController {
         
         randomB.layer.borderWidth = 5
         randomA.layer.borderWidth = 0
-        randomA.layer.cornerRadius = 0
+        randomA.layer.cornerRadius = 20
         randomB.layer.cornerRadius = 20
         randomB.layer.borderColor = UIColor.black.cgColor
         diceNumber = Int.random(in: 50...100)

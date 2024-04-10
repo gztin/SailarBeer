@@ -22,23 +22,25 @@ class gameInfViewController: UIViewController {
     var total:Int!
     
     @IBOutlet var codeInf: UILabel!
+    
     @IBOutlet var oneDice: UIButton!
     @IBOutlet var twoDice: UIButton!
     @IBOutlet var threeDice: UIButton!
-    @IBOutlet var MSG: UILabel!
-    @IBOutlet var beerPic: UIImageView!
-    @IBOutlet var gameMSG: UIImageView!
-    @IBOutlet var playAgain: UIButton!
     
+//    @IBOutlet var beerPic: UIImageView!
+    
+    @IBOutlet var gamePic: UIImageView!
+    @IBOutlet var MSG: UILabel!
+    @IBOutlet var playAgain: UIButton!
+
     @IBOutlet var oneDiceA: UIImageView!
+
     @IBOutlet var twoDiceA: UIImageView!
     @IBOutlet var twoDiceB: UIImageView!
     
     @IBOutlet var threeDiceA: UIImageView!
     @IBOutlet var threeDiceB: UIImageView!
     @IBOutlet var threeDiceC: UIImageView!
-    
-    @IBOutlet var cardView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -69,7 +71,9 @@ class gameInfViewController: UIViewController {
         }
         
         hideBackButton()
-        beerPic.layer.opacity = 0
+        codeInf.text = "0"
+        playAgain.layer.opacity = 0
+        gamePic.layer.opacity = 0
         oneDice.layer.borderWidth = 3
         twoDice.layer.borderWidth = 0
         threeDice.layer.borderWidth = 0
@@ -85,14 +89,14 @@ class gameInfViewController: UIViewController {
         click?.stop()
         click?.currentTime = 0
         click?.play()
-        
         playAgain.layer.opacity = 0
         codeInf.text = "0"
         sumOfDice = 0
-        beerPic.layer.opacity = 0
+        gamePic.layer.opacity = 0
         diceCode = Int.random(in: 50...100)
         MSG.text = "本局目標點數是： \(String(diceCode))"
         gameover = false
+        codeInf.layer.opacity = 1
     }
     func hideBackButton(){
         navigationItem.hidesBackButton = true
@@ -111,6 +115,7 @@ class gameInfViewController: UIViewController {
         threeDice.layer.borderWidth = 0
         oneDice.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
     }
+    
     @IBAction func playTwo(_ sender: Any) {
         click?.play()
         click?.stop()
@@ -124,6 +129,7 @@ class gameInfViewController: UIViewController {
         threeDice.layer.borderWidth = 0
         twoDice.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
     }
+    
     @IBAction func playThree(_ sender: Any) {
         click?.play()
         click?.stop()
@@ -137,13 +143,13 @@ class gameInfViewController: UIViewController {
         threeDice.layer.borderWidth = 3
         threeDice.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0).cgColor
     }
+    
     //    搖晃
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         diceRoll?.play()
         diceRoll?.stop()
         diceRoll?.currentTime = 0
         diceRoll?.play()
-        cardView.layer.opacity = 0
         
         total = 0
         oneDiceA.layer.opacity = 0
@@ -156,6 +162,7 @@ class gameInfViewController: UIViewController {
         if motion == .motionShake {
            codeInf.text = ""
             if gameover == false {
+                gamePic.layer.opacity = 0
                 AudioServicesPlaySystemSound(1521) // Actuate "Pop" feedback (strong boom)
                 if diceCount == 1{
                     tempDice = Int.random(in: 1...6)
@@ -177,22 +184,22 @@ class gameInfViewController: UIViewController {
                         }
                     }
                     if (total == 2) && ((diceCode - sumOfDice) < 15){
-                        cardView.image = UIImage(named: "card1")
-                        cardView.layer.opacity = 1
+                        gamePic.image = UIImage(named: "card1")
+                        gamePic.layer.opacity = 1
                         twoDiceA.layer.opacity = 0
                         twoDiceB.layer.opacity = 0
                         print("獲得迴轉卡")
                         codeInf.text = String(sumOfDice)
                     }else if(total == 7) && ((diceCode - sumOfDice) < 15){
-                        cardView.image = UIImage(named: "card2")
-                        cardView.layer.opacity = 1
+                        gamePic.image = UIImage(named: "card2")
+                        gamePic.layer.opacity = 1
                         twoDiceA.layer.opacity = 0
                         twoDiceB.layer.opacity = 0
                         print("獲得暫停卡")
                         codeInf.text = String(sumOfDice)
                     }else if(total == 12) && ((diceCode - sumOfDice) < 15){
-                        cardView.image = UIImage(named: "card3")
-                        cardView.layer.opacity = 1
+                        gamePic.image = UIImage(named: "card3")
+                        gamePic.layer.opacity = 1
                         twoDiceA.layer.opacity = 0
                         twoDiceB.layer.opacity = 0
                         print("獲得指定卡")
@@ -220,23 +227,23 @@ class gameInfViewController: UIViewController {
                         }
                     }
                     if ((total == 18) || (total == 12)) && ((diceCode - sumOfDice) < 25){
-                        cardView.image = UIImage(named: "card3")
-                        cardView.layer.opacity = 1
+                        gamePic.image = UIImage(named: "card3")
+                        gamePic.layer.opacity = 1
                         threeDiceA.layer.opacity = 0
                         threeDiceB.layer.opacity = 0
                         threeDiceC.layer.opacity = 0
                         codeInf.text = String(sumOfDice)
                         print("獲得指定卡")
                     }else if(total == 7) && ((diceCode - sumOfDice) < 25){
-                        cardView.image = UIImage(named: "card2")
-                        cardView.layer.opacity = 1
+                        gamePic.image = UIImage(named: "card2")
+                        gamePic.layer.opacity = 1
                         threeDiceA.layer.opacity = 0
                         threeDiceB.layer.opacity = 0
                         threeDiceC.layer.opacity = 0
                         codeInf.text = String(sumOfDice)
                     }else if(total == 3) && ((diceCode - sumOfDice) < 25){
-                        cardView.image = UIImage(named: "card1")
-                        cardView.layer.opacity = 1
+                        gamePic.image = UIImage(named: "card1")
+                        gamePic.layer.opacity = 1
                         threeDiceA.layer.opacity = 0
                         threeDiceB.layer.opacity = 0
                         threeDiceC.layer.opacity = 0
@@ -256,13 +263,15 @@ class gameInfViewController: UIViewController {
                      threeDiceA.layer.opacity = 0
                      threeDiceB.layer.opacity = 0
                      threeDiceC.layer.opacity = 0
+                     codeInf.layer.opacity = 0
                      
                      losegame?.play()
                      losegame?.stop()
                      losegame?.currentTime = 0
                      losegame?.play()
                      
-                     beerPic.layer.opacity = 1
+                     gamePic.image = UIImage(named: "lose")
+                     gamePic.layer.opacity = 1
                      playAgain.layer.opacity = 1
                      MSG.layer.opacity = 1
                      gameover = true

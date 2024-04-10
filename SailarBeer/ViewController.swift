@@ -13,8 +13,12 @@ class ViewController: UIViewController {
     //    按鈕播放器
     var click: AVAudioPlayer?
     
+    @IBOutlet var indexView: UIImageView!
+    @IBOutlet var gameBgView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //        按鈕音效
         let urlClick = Bundle.main.url(forResource: "click", withExtension: "wav")!
         do {
